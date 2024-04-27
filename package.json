@@ -1,0 +1,41 @@
+{
+  "name": "goosang-payload",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "node build.mjs; npm run dev:astro & npm run dev:server --watch",
+    "dev:astro": "astro --root=app dev",
+    "dev:server": "node build.mjs --watch",
+    "start": "astro dev",
+    "serve": "NODE_ENV=production node .build/server.cjs --serve",
+    "build": "node build.mjs; astro --root=app check && astro --root=app build",
+    "build:static": "astro --root=app --config=astro-static.config.mjs build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/node": "^8.2.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@payloadcms/bundler-vite": "^0.1.6",
+    "@payloadcms/bundler-webpack": "^1.0.6",
+    "@payloadcms/db-postgres": "^0.8.1",
+    "@payloadcms/plugin-form-builder": "^1.2.1",
+    "@payloadcms/richtext-slate": "^1.5.0",
+    "astro": "^4.7.0",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.6",
+    "esbuild": "^0.20.2",
+    "express": "^4.19.2",
+    "payload": "^2.14.0",
+    "postcss": "^8.4.38",
+    "sass": "^1.75.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "daisyui": "^4.10.2"
+  }
+}

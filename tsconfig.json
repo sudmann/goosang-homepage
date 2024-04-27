@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strict": false,
+    "esModuleInterop": true,
+    "paths": {
+      "payload/generated-types": ["./cms/generates-types.ts"]
+    }
+  }
+}
